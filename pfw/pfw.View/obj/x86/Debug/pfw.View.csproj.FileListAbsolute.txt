@@ -1,0 +1,17 @@
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\obj\x86\Debug\pfw.View.Properties.Resources.resources
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\obj\x86\Debug\pfw.View.WinForms.MDIForm.resources
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\obj\x86\Debug\pfw.View.csproj.GenerateResource.Cache
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\bin\Debug\pfw.View.exe.config
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\bin\Debug\pfw.View.exe
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\bin\Debug\pfw.View.pdb
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\bin\Debug\pfw.Controller.dll
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\bin\Debug\pfw.Model.dll
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\bin\Debug\EntityFramework.dll
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\bin\Debug\pfw.Controller.pdb
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\bin\Debug\pfw.Model.pdb
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\obj\x86\Debug\pfw.View.csprojResolveAssemblyReference.cache
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\obj\x86\Debug\pfw.View.exe
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\obj\x86\Debug\pfw.View.pdb
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\obj\x86\Debug\pfw.View.WinForms.WinForm.resources
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\bin\Debug\pfw.SDK.dll
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.View\bin\Debug\pfw.SDK.pdb

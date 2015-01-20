@@ -1,0 +1,13 @@
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.Service\bin\Debug\pfw.Service.dll.config
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.Service\bin\Debug\pfw.Service.dll
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.Service\bin\Debug\pfw.Service.pdb
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.Service\obj\Debug\pfw.Service.dll
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.Service\obj\Debug\pfw.Service.pdb
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.Service\bin\Debug\pfw.Controller.dll
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.Service\bin\Debug\pfw.Model.dll
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.Service\bin\Debug\pfw.SDK.dll
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.Service\bin\Debug\EntityFramework.dll
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.Service\bin\Debug\pfw.Controller.pdb
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.Service\bin\Debug\pfw.Model.pdb
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.Service\bin\Debug\pfw.SDK.pdb
+C:\Users\prakashv\Documents\Visual Studio 2010\Projects\pfw\pfw.Service\obj\Debug\pfw.Service.csprojResolveAssemblyReference.cache
