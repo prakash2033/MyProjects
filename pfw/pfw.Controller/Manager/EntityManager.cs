@@ -16,13 +16,17 @@ namespace pfw.Controller.Manager
 
         #region Constructor
 
+        static EntityManager()
+        {
+            //Not in use
+        }
+
         public EntityManager()
         {
-            
-        }
-        #endregion
 
-        public abstract EntityBase GetEntity(EntityTypeName entityTypeName);
+        }
+
+        #endregion
 
         #region IDisposable Members
 
@@ -33,6 +37,7 @@ namespace pfw.Controller.Manager
 
         #endregion
 
-        public abstract void CreateManager();
+
+        public abstract EntityBase GetEntity(EntityTypeName entityTypeName);
     }
 }

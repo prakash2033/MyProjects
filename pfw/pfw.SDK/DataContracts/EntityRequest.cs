@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
 using pfw.Controller.Base;
+using pfw.Controller.Manager;
 
 namespace pfw.SDK.DataContracts
 {
@@ -18,5 +19,8 @@ namespace pfw.SDK.DataContracts
 
         [DataMember]
         public EntityTypeName EntityTypeName { get; set; }
+
+        [DataMember]
+        public EntityManager EntityManager { get; set; }
     }
 }

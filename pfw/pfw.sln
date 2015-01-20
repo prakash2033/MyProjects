@@ -6,6 +6,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pfw.Model", "pfw.Model\pfw.Model.csproj", "{E3EF3C62-83BA-4C64-B77E-999DB991A4AA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pfw.View", "pfw.View\pfw.View.csproj", "{3AF5DCE2-5D4A-4AD7-9418-00F9032C8ECA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{757727D9-1225-471E-9310-3A2DDF41C68A} = {757727D9-1225-471E-9310-3A2DDF41C68A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pfw.SDK", "pfw.SDK\pfw.SDK.csproj", "{CF21658C-3B00-401B-AECA-36B74DEA49A2}"
 EndProject

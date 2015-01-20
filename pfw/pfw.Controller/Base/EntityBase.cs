@@ -65,13 +65,13 @@ namespace pfw.Controller.Base
 
         #region Protected Functions
 
-        protected virtual void ReportPropertyChanging(string propertyName)
+        protected new virtual void ReportPropertyChanging(string propertyName)
         {
             if (ProperyChangingEvent != null)
                 ProperyChangingEvent(this, new PropertyChangingEventArgs(propertyName));
         }
 
-        protected virtual void ReportPropertyChanged(string propertyName)
+        protected new virtual void ReportPropertyChanged(string propertyName)
         {
             if (PropertyChangedEvent != null)
                 PropertyChangedEvent(this, new PropertyChangedEventArgs(propertyName));

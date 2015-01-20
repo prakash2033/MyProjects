@@ -5,6 +5,7 @@ using System.Text;
 using pfw.Controller.Manager;
 using pfw.Controller.Base;
 using pfw.Controller.Entities;
+using pfw.Controller.Resources;
 
 namespace pfw.Model.Managers
 {
@@ -17,13 +18,8 @@ namespace pfw.Model.Managers
                 case Controller.Base.EntityTypeName.Item:
                     return new pfw.Model.Masters.Item(this);
                 default:
-                    throw new NotImplementedException("Entity not implemented.");
+                    throw new NotImplementedException(string.Format(StringResource.ENTITY_NOT_IMPLEMENTED, entityTypeName.ToString()));
             }
-        }
-
-        public override void CreateManager()
-        {
-            
         }
     }
 }

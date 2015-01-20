@@ -21,7 +21,11 @@ namespace pfw.View.WinForms
 
         private void newItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            entityManager = new pfw.Model.Managers.MasterEntityManager();
+            EntityServiceReference.EntityServiceClient client = new EntityServiceReference.EntityServiceClient();
+            var request = new SDK.DataContracts.EntityRequest { EntityTypeName = Controller.Base.EntityTypeName.Item };
+            client.Manager(request);
+            client.Entity(request);
+
             EntityBase entityBase = entityManager.GetEntity(Controller.Base.EntityTypeName.Item);
             WinForm wf = new WinForm(entityManager, entityBase);
             wf.MdiParent = this;
