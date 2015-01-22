@@ -5,6 +5,7 @@ using System.Text;
 
 namespace pfw.Controller.Base
 {
+    [Serializable]
     public enum EntityTypeName
     {
         None = 0,

@@ -9,6 +9,7 @@ using pfw.Controller.Resources;
 
 namespace pfw.Model.Managers
 {
+    [Serializable]
     public class MasterEntityManager : EntityManager
     {
         public override EntityBase GetEntity(EntityTypeName entityTypeName)

@@ -13,6 +13,8 @@ namespace pfw.Model.Masters
     [Table("Item")]
     public class Item : MasterEntity
     {
+        private string _itemCode;
+
         #region Constructor
 
         public Item(EntityManager entityManager)
@@ -20,5 +22,20 @@ namespace pfw.Model.Masters
         { } 
 
         #endregion
+        
+        public string ItemCode
+        {
+            get
+            {
+                return _itemCode;
+            }
+            set
+            {
+                ReportPropertyChanging("ItemCode");
+                _itemCode = value;
+                ReportPropertyChanged("ItemCode");
+            }
+        }
+
     }
 }

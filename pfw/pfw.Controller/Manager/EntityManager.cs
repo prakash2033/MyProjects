@@ -6,38 +6,12 @@ using pfw.Controller.Base;
 
 namespace pfw.Controller.Manager
 {
-    public abstract class EntityManager : IDisposable
+    [Serializable]
+    public class EntityManager : Manager, IDisposable
     {
-        #region Public Properties
-
-        public EntityTypeName EntityTypeName { get; set; }
-
-        #endregion
-
-        #region Constructor
-
-        static EntityManager()
+        public override EntityBase GetEntity(EntityTypeName entityTypeName)
         {
-            //Not in use
+            return null;
         }
-
-        public EntityManager()
-        {
-
-        }
-
-        #endregion
-
-        #region IDisposable Members
-
-        public virtual void Dispose()
-        {
-            
-        } 
-
-        #endregion
-
-
-        public abstract EntityBase GetEntity(EntityTypeName entityTypeName);
     }
 }

@@ -9,6 +9,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace pfw.Controller.Entities
 {
+    [Serializable]
     public class MasterEntity : DataEntity
     {
         #region Constructor

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/pfw.Controller.Manager" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/pfw.Controller.Manager" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57872/WCF/EntityService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/pfw.Controller.Base" />
+  <xs:import schemaLocation="http://localhost:57872/WCF/EntityService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="EntityManager">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Manager">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityManager" nillable="true" type="tns:EntityManager" />
+  <xs:complexType name="Manager">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/pfw.Controller.Base" name="_x003C_EntityTypeName_x003E_k__BackingField" type="q1:EntityTypeName" />
+      <xs:element name="_x003C_ManagerGuid_x003E_k__BackingField" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Manager" nillable="true" type="tns:Manager" />
+</xs:schema>

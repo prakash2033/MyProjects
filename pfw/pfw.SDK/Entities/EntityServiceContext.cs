@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using pfw.SDK.DataContracts;
 using pfw.Controller.Manager;
+using pfw.Controller.Base;
 
 namespace pfw.SDK.Entities
 {
+    /// <summary>
+    /// This class is used as an agent for entity requests.
+    /// </summary>
+    [Serializable]
     public class EntityServiceContext
     {
         private EntityManager _Manager;
@@ -15,6 +20,11 @@ namespace pfw.SDK.Entities
 
         public EntityRequest EntityRequest { get; set; }
         public EntityResponse EntityResponse { get; set; }
+
+        public ActionRequest ActionRequest { get; set; }
+        public ActionResponse ActionResponse { get; set; }
+
+        public EntityBase EntityBase { get; set; }
 
         public EntityManager Manager
         {
@@ -28,13 +38,24 @@ namespace pfw.SDK.Entities
 
         #endregion
 
-
-
         #region Constructor
 
+        /// <summary>
+        /// pfw.SDK.EntityServiceContext Constructor with Entity request parameter.
+        /// </summary>
+        /// <param name="entityRequest"></param>
         public EntityServiceContext(EntityRequest entityRequest)
         {
             EntityRequest = entityRequest;
+        }
+
+        /// <summary>
+        /// pfw.SDK.EntityServiceContext Constructor with Action request parameter.
+        /// </summary>
+        /// <param name="actionRequest"></param>
+        public EntityServiceContext(ActionRequest actionRequest)
+        {
+            ActionRequest = actionRequest;
         }
 
         #endregion
@@ -45,7 +66,7 @@ namespace pfw.SDK.Entities
 
             try
             {
-                if (EntityRequest != null && Manager!=null)
+                if (EntityRequest != null && Manager != null)
                 {
 
                 }
@@ -57,6 +78,26 @@ namespace pfw.SDK.Entities
             }
 
             return EntityResponse;
+        }
+
+        public ActionResponse EntityAction()
+        {
+            ActionResponse = new ActionResponse();
+
+            try
+            {
+                if (ActionRequest != null && Manager != null)
+                {
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return ActionResponse;
         }
     }
 }

@@ -46,10 +46,12 @@
   <ItemGroup>
     <Compile Include="Base\EntityBase.cs" />
     <Compile Include="Base\EntityTypeName.cs" />
+    <Compile Include="Base\EntityView.cs" />
     <Compile Include="Data\DataContext.cs" />
     <Compile Include="Data\DataEntity.cs" />
     <Compile Include="Entities\MasterEntity.cs" />
     <Compile Include="Manager\EntityManager.cs" />
+    <Compile Include="Manager\Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\StringResource.cs" />
   </ItemGroup>

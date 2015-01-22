@@ -7,6 +7,7 @@ using pfw.Controller.Manager;
 
 namespace pfw.Controller.Data
 {
+    [Serializable]
     public class DataEntity : EntityBase
     {
         #region Constructor
