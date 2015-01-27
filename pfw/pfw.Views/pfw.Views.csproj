@@ -56,7 +56,9 @@
     <Compile Include="EntityViews\Masters\Catalog\AllItemView.Designer.cs">
       <DependentUpon>AllItemView.cs</DependentUpon>
     </Compile>
-    <Compile Include="EntityViews\Masters\Entity\ItemView.cs" />
+    <Compile Include="EntityViews\Masters\Entity\ItemView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EntityViews\Masters\Entity\ItemView.Designer.cs">
       <DependentUpon>ItemView.cs</DependentUpon>
     </Compile>
