@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using pfw.UI.Actions;
-using pfw.UI.WinForms;
-using pfw.UI.EntityServiceReference;
+using pfw.UI.Win.Actions;
+using pfw.UI.Win.WinForms;
+using pfw.UI.Win.EntityServiceReference;
 
-namespace pfw.UI.Handlers
+namespace pfw.UI.Win.Handlers
 {
     public class EntityHandler : Handler
     {

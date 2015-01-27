@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.ComponentModel;
-using pfw.UI.WinForms;
-using pfw.UI.EntityServiceReference;
+using pfw.UI.Win.WinForms;
+using pfw.UI.Win.EntityServiceReference;
 
-namespace pfw.UI.Actions
+namespace pfw.UI.Win.Actions
 {
     public partial class ActionToolStripMenuItem : ToolStripMenuItem, IActionComponent
     {

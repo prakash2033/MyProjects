@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using pfw.UI.WinForms;
-using pfw.UI.Actions;
+using pfw.UI.Win.WinForms;
+using pfw.UI.Win.Actions;
 
-namespace pfw.UI.Handlers
+namespace pfw.UI.Win.Handlers
 {
     public class MdiHandler : EntityHandler, IWin
     {

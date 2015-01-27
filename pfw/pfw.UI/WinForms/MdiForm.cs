@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace pfw.UI.WinForms
+namespace pfw.UI.Win.WinForms
 {
     public partial class MdiForm : WinForm
     {

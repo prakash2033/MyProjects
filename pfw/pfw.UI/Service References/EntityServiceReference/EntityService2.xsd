@@ -15,6 +15,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="EntityId" type="xs:long" />
       <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/pfw.Controller.Base" minOccurs="0" name="EntityTypeName" type="q3:EntityTypeName" />
+      <xs:element minOccurs="0" name="IsRequestSuccessful" type="xs:boolean" />
       <xs:element minOccurs="0" name="ManagerGuid" type="ser:guid" />
     </xs:sequence>
   </xs:complexType>

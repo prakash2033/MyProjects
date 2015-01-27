@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace pfw.UI.EntityServiceReference {
+namespace pfw.UI.Win.EntityServiceReference {
     using System.Runtime.Serialization;
     using System;
     
@@ -26,10 +26,10 @@ namespace pfw.UI.EntityServiceReference {
         private long EntityIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private pfw.UI.EntityServiceReference.EntityManager EntityManagerField;
+        private pfw.UI.Win.EntityServiceReference.EntityManager EntityManagerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private pfw.UI.EntityServiceReference.EntityTypeName EntityTypeNameField;
+        private pfw.UI.Win.EntityServiceReference.EntityTypeName EntityTypeNameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -55,7 +55,7 @@ namespace pfw.UI.EntityServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public pfw.UI.EntityServiceReference.EntityManager EntityManager {
+        public pfw.UI.Win.EntityServiceReference.EntityManager EntityManager {
             get {
                 return this.EntityManagerField;
             }
@@ -68,7 +68,7 @@ namespace pfw.UI.EntityServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public pfw.UI.EntityServiceReference.EntityTypeName EntityTypeName {
+        public pfw.UI.Win.EntityServiceReference.EntityTypeName EntityTypeName {
             get {
                 return this.EntityTypeNameField;
             }
@@ -94,7 +94,7 @@ namespace pfw.UI.EntityServiceReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="EntityManager", Namespace="http://schemas.datacontract.org/2004/07/pfw.Controller.Manager")]
     [System.SerializableAttribute()]
-    public partial class EntityManager : pfw.UI.EntityServiceReference.Manager {
+    public partial class EntityManager : pfw.UI.Win.EntityServiceReference.Manager {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
@@ -112,13 +112,13 @@ namespace pfw.UI.EntityServiceReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Manager", Namespace="http://schemas.datacontract.org/2004/07/pfw.Controller.Manager")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(pfw.UI.EntityServiceReference.EntityManager))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(pfw.UI.Win.EntityServiceReference.EntityManager))]
     public partial class Manager : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private pfw.UI.EntityServiceReference.EntityTypeName EntityTypeNamek__BackingFieldField;
+        private pfw.UI.Win.EntityServiceReference.EntityTypeName EntityTypeNamek__BackingFieldField;
         
         private System.Guid ManagerGuidk__BackingFieldField;
         
@@ -133,7 +133,7 @@ namespace pfw.UI.EntityServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Name="<EntityTypeName>k__BackingField", IsRequired=true)]
-        public pfw.UI.EntityServiceReference.EntityTypeName EntityTypeNamek__BackingField {
+        public pfw.UI.Win.EntityServiceReference.EntityTypeName EntityTypeNamek__BackingField {
             get {
                 return this.EntityTypeNamek__BackingFieldField;
             }
@@ -181,7 +181,10 @@ namespace pfw.UI.EntityServiceReference {
         private long EntityIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private pfw.UI.EntityServiceReference.EntityTypeName EntityTypeNameField;
+        private pfw.UI.Win.EntityServiceReference.EntityTypeName EntityTypeNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsRequestSuccessfulField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Guid ManagerGuidField;
@@ -210,7 +213,7 @@ namespace pfw.UI.EntityServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public pfw.UI.EntityServiceReference.EntityTypeName EntityTypeName {
+        public pfw.UI.Win.EntityServiceReference.EntityTypeName EntityTypeName {
             get {
                 return this.EntityTypeNameField;
             }
@@ -218,6 +221,19 @@ namespace pfw.UI.EntityServiceReference {
                 if ((this.EntityTypeNameField.Equals(value) != true)) {
                     this.EntityTypeNameField = value;
                     this.RaisePropertyChanged("EntityTypeName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsRequestSuccessful {
+            get {
+                return this.IsRequestSuccessfulField;
+            }
+            set {
+                if ((this.IsRequestSuccessfulField.Equals(value) != true)) {
+                    this.IsRequestSuccessfulField = value;
+                    this.RaisePropertyChanged("IsRequestSuccessful");
                 }
             }
         }
@@ -253,16 +269,16 @@ namespace pfw.UI.EntityServiceReference {
         void DoWork();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntityService/Entity", ReplyAction="http://tempuri.org/IEntityService/EntityResponse")]
-        pfw.UI.EntityServiceReference.EntityResponse Entity(pfw.UI.EntityServiceReference.EntityRequest request);
+        pfw.UI.Win.EntityServiceReference.EntityResponse Entity(pfw.UI.Win.EntityServiceReference.EntityRequest request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IEntityServiceChannel : pfw.UI.EntityServiceReference.IEntityService, System.ServiceModel.IClientChannel {
+    public interface IEntityServiceChannel : pfw.UI.Win.EntityServiceReference.IEntityService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EntityServiceClient : System.ServiceModel.ClientBase<pfw.UI.EntityServiceReference.IEntityService>, pfw.UI.EntityServiceReference.IEntityService {
+    public partial class EntityServiceClient : System.ServiceModel.ClientBase<pfw.UI.Win.EntityServiceReference.IEntityService>, pfw.UI.Win.EntityServiceReference.IEntityService {
         
         public EntityServiceClient() {
         }
@@ -287,7 +303,7 @@ namespace pfw.UI.EntityServiceReference {
             base.Channel.DoWork();
         }
         
-        public pfw.UI.EntityServiceReference.EntityResponse Entity(pfw.UI.EntityServiceReference.EntityRequest request) {
+        public pfw.UI.Win.EntityServiceReference.EntityResponse Entity(pfw.UI.Win.EntityServiceReference.EntityRequest request) {
             return base.Channel.Entity(request);
         }
     }

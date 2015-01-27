@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using pfw.UI.EntityServiceReference;
-using pfw.UI.WinForms;
+using pfw.UI.Win.WinForms;
+using pfw.UI.Win.Actions;
+using pfw.UI.Win.EntityServiceReference;
 
-namespace pfw.UI.Actions
+namespace pfw.UI.Win.Actions
 {
     public interface IActionComponent
     {

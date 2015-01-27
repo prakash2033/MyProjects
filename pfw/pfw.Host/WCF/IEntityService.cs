@@ -13,9 +13,9 @@ namespace pfw.Host.WCF
     public interface IEntityService
     {
         [OperationContract]
-        void DoWork();
-
-        [OperationContract]
         EntityResponse Entity(EntityRequest request);
+
+        [OperationContract] 
+        EntityResponse Layout(EntityRequest request);
     }
 }

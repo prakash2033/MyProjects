@@ -6,13 +6,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using pfw.UI.WinForms;
+using pfw.UI.Win.WinForms;
 
-namespace pfw.Views.EntityViews
+namespace pfw.Views.EntityViews.Masters.Catalog
 {
-    public partial class ItemView : WinForm
+    public partial class AllItemView : CatalogWinForm
     {
-        public ItemView()
+        public AllItemView()
         {
             InitializeComponent();
         }

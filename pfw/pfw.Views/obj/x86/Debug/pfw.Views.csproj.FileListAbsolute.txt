@@ -1,9 +1,9 @@
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Views\bin\Debug\pfw.Views.dll
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Views\bin\Debug\pfw.Views.pdb
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Views\obj\x86\Debug\pfw.Views.csprojResolveAssemblyReference.cache
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Views\obj\x86\Debug\pfw.Views.Properties.Resources.resources
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Views\obj\x86\Debug\pfw.Views.csproj.GenerateResource.Cache
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Views\bin\Debug\pfw.Views.dll
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Views\bin\Debug\pfw.Views.pdb
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Views\bin\Debug\pfw.UI.Win.exe
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Views\bin\Debug\pfw.UI.Win.pdb
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Views\obj\x86\Debug\pfw.Views.dll
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Views\obj\x86\Debug\pfw.Views.pdb
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Views\bin\Debug\pfw.UI.exe
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Views\bin\Debug\pfw.UI.pdb
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Views\obj\x86\Debug\pfw.Views.csprojResolveAssemblyReference.cache

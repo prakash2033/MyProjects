@@ -12,4 +12,3 @@ C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Controller\bin\Debug\pfw.C
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Controller\bin\Debug\pfw.Controller.pdb
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Controller\obj\Debug\pfw.Controller.dll
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Controller\obj\Debug\pfw.Controller.pdb
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Controller\obj\Debug\pfw.Controller.csprojResolveAssemblyReference.cache

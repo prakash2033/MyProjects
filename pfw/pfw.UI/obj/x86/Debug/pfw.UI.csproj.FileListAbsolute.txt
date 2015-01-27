@@ -6,3 +6,4 @@ C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.ex
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.pdb
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.WinForms.MdiForm.resources
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\bin\Debug\pfw.UI.exe.config
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.WinForms.CatalogWinForm.resources

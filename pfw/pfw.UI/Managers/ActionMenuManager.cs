@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using pfw.UI.Actions;
-using pfw.UI.WinForms;
+using pfw.UI.Win.Actions;
+using pfw.UI.Win.WinForms;
 using System.ComponentModel;
 
-namespace pfw.UI.Managers
+namespace pfw.UI.Win.Managers
 {
     #region ActionEventHaldler
 

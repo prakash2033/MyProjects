@@ -6,10 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using pfw.UI.Managers;
-using pfw.UI.EntityServiceReference;
+using pfw.UI.Win.Managers;
+using pfw.UI.Win.EntityServiceReference;
 
-namespace pfw.UI.WinForms
+namespace pfw.UI.Win.WinForms
 {
     public partial class WinForm : Form, IWin
     {

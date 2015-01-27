@@ -1,4 +1,4 @@
-﻿namespace pfw.UI.WinForms
+﻿namespace pfw.UI.Win.WinForms
 {
     partial class WinForm
     {

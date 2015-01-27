@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6c60d3d5-145f-4d4c-83a7-c068f13d6758" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="75324b3c-ffe8-4efa-9115-ba579b8d98cc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -21,13 +21,13 @@
     <MetadataSource Address="http://localhost:57872/WCF/EntityService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EntityService.disco" MetadataType="Disco" ID="b62c7ae0-1017-49b5-966b-ba7291b69e84" SourceId="1" SourceUrl="http://localhost:57872/WCF/EntityService.svc?disco" />
-    <MetadataFile FileName="EntityService.wsdl" MetadataType="Wsdl" ID="20dd891c-c4f1-4a39-a6d9-86343f165aba" SourceId="1" SourceUrl="http://localhost:57872/WCF/EntityService.svc?wsdl" />
-    <MetadataFile FileName="EntityService.xsd" MetadataType="Schema" ID="7eab8776-670a-40c8-b7f9-bc6434d7459a" SourceId="1" SourceUrl="http://localhost:57872/WCF/EntityService.svc?xsd=xsd0" />
-    <MetadataFile FileName="EntityService1.xsd" MetadataType="Schema" ID="478d056f-6a0c-43ef-854f-22a8861a7cee" SourceId="1" SourceUrl="http://localhost:57872/WCF/EntityService.svc?xsd=xsd1" />
-    <MetadataFile FileName="EntityService2.xsd" MetadataType="Schema" ID="c31147ae-ff9b-457e-b517-9b78da7319cd" SourceId="1" SourceUrl="http://localhost:57872/WCF/EntityService.svc?xsd=xsd2" />
-    <MetadataFile FileName="EntityService3.xsd" MetadataType="Schema" ID="021b7386-a71a-435b-9317-0cf09f5dcd22" SourceId="1" SourceUrl="http://localhost:57872/WCF/EntityService.svc?xsd=xsd3" />
-    <MetadataFile FileName="EntityService4.xsd" MetadataType="Schema" ID="848ce07a-b075-43b4-95e1-fb4ba1e25d6d" SourceId="1" SourceUrl="http://localhost:57872/WCF/EntityService.svc?xsd=xsd4" />
+    <MetadataFile FileName="EntityService.disco" MetadataType="Disco" ID="ddc0832a-9846-45b7-b5a4-d82b9d27b19b" SourceId="1" SourceUrl="http://localhost:57872/WCF/EntityService.svc?disco" />
+    <MetadataFile FileName="EntityService.wsdl" MetadataType="Wsdl" ID="0c37a377-59df-4bb9-9f64-319d1aece47b" SourceId="1" SourceUrl="http://localhost:57872/WCF/EntityService.svc?wsdl" />
+    <MetadataFile FileName="EntityService.xsd" MetadataType="Schema" ID="2b5bf7b9-48c7-41ff-bd59-aefaafbfd0a7" SourceId="1" SourceUrl="http://localhost:57872/WCF/EntityService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EntityService1.xsd" MetadataType="Schema" ID="efc73810-37b9-425f-8674-9f6abf871c9e" SourceId="1" SourceUrl="http://localhost:57872/WCF/EntityService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EntityService2.xsd" MetadataType="Schema" ID="0000f59e-8df2-40b0-8432-4887ceb4ceaa" SourceId="1" SourceUrl="http://localhost:57872/WCF/EntityService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EntityService3.xsd" MetadataType="Schema" ID="196e14b0-0c0a-48d1-97f3-c002c6cd62a1" SourceId="1" SourceUrl="http://localhost:57872/WCF/EntityService.svc?xsd=xsd3" />
+    <MetadataFile FileName="EntityService4.xsd" MetadataType="Schema" ID="21764c6a-d72f-4251-9cee-a32ac18fd5ff" SourceId="1" SourceUrl="http://localhost:57872/WCF/EntityService.svc?xsd=xsd4" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

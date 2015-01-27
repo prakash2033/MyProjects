@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using pfw.UI.EntityServiceReference;
-using pfw.UI.WinForms;
+using pfw.UI.Win.EntityServiceReference;
+using pfw.UI.Win.WinForms;
 
-namespace pfw.UI.Actions
+namespace pfw.UI.Win.Actions
 {
     /// <summary>
     /// This is action component.

@@ -1,0 +1,9 @@
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\bin\Debug\pfw.UI.Win.exe.config
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\bin\Debug\pfw.UI.Win.exe
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\bin\Debug\pfw.UI.Win.pdb
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.Win.WinForms.CatalogWinForm.resources
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.Win.WinForms.MdiForm.resources
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.Win.Properties.Resources.resources
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.Win.csproj.GenerateResource.Cache
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.Win.exe
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.Win.pdb

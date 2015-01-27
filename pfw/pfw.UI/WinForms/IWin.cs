@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using pfw.UI.Managers;
-using pfw.UI.EntityServiceReference;
+using pfw.UI.Win.Managers;
+using pfw.UI.Win.EntityServiceReference;
 
-namespace pfw.UI.WinForms
+namespace pfw.UI.Win.WinForms
 {
     public interface IWin
     {

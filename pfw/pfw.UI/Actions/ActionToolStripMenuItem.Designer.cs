@@ -1,4 +1,4 @@
-﻿namespace pfw.UI.Actions
+﻿namespace pfw.UI.Win.Actions
 {
     partial class ActionToolStripMenuItem
     {

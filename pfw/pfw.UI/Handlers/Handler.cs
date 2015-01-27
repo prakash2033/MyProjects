@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using pfw.UI.WinForms;
-using pfw.UI.Actions;
+using pfw.UI.Win.WinForms;
+using pfw.UI.Win.Actions;
 using System.Windows.Forms;
-using pfw.UI.Managers;
+using pfw.UI.Win.Managers;
 
-namespace pfw.UI.Handlers
+namespace pfw.UI.Win.Handlers
 {
     public abstract class Handler
     {
+        public EntityManager EntityManager { get; private set; }
+
         //
         public IActionComponent OriginalAction { get; private set; }
         public IActionComponent InvokedAction { get; private set; }
@@ -88,7 +90,7 @@ namespace pfw.UI.Handlers
                 switch (actionComponent.ActionCommandType)
                 {
                     case ActionCommandTypes.New:
-                        //PerformAction_New(actionComponent);
+                        PerformAction_New(actionComponent);
                         break;
                     case ActionCommandTypes.Save:
                         //PerformAction_Save(actionComponent);

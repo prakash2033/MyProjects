@@ -13,22 +13,23 @@ namespace pfw.Host.WCF
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "EntityService" in code, svc and config file together.
     public class EntityService : IEntityService
     {
-        public void DoWork()
+        public ActionResponse EntityAction(ActionRequest request)
         {
-
+            return new EntityServiceContext(request).EntityAction();
         }
 
-        public SDK.DataContracts.EntityResponse Entity(EntityRequest request)
+
+        public EntityResponse Layout(EntityRequest request)
+        {
+            return null;
+        }
+
+        public EntityResponse Entity(EntityRequest request)
         {
             if (request != null)
                 request.EntityManager = EntityManagerHelper.CreateManager(request.EntityTypeName);
 
             return new EntityServiceContext(request).Entity();
-        }
-
-        public ActionResponse EntityAction(ActionRequest request)
-        {
-            return new EntityServiceContext(request).EntityAction();
         }
     }
 }

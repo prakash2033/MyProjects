@@ -1,6 +1,6 @@
-﻿namespace pfw.Views.EntityViews
+﻿namespace pfw.Views.EntityViews.Masters.Catalog
 {
-    partial class ItemView
+    partial class AllItemView
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "ItemView";
+            this.Text = "AllItemView";
         }
 
         #endregion

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using pfw.UI.Handlers;
-using pfw.UI.WinForms;
+using pfw.UI.Win.Handlers;
+using pfw.UI.Win.WinForms;
 
-namespace pfw.UI
+namespace pfw.UI.Win
 {
     static class Program
     {

@@ -1,4 +1,4 @@
-﻿namespace pfw.UI.WinForms
+﻿namespace pfw.UI.Win.WinForms
 {
     partial class MdiForm
     {
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.actionToolStripMenuItem1 = new pfw.UI.Actions.ActionToolStripMenuItem(this.components);
+            this.actionToolStripMenuItem1 = new pfw.UI.Win.Actions.ActionToolStripMenuItem(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -47,11 +47,11 @@
             // 
             // actionToolStripMenuItem1
             // 
-            this.actionToolStripMenuItem1.ActionCommandType = pfw.UI.Actions.ActionCommandTypes.Navigate;
-            this.actionToolStripMenuItem1.ActionEntityType = pfw.UI.EntityServiceReference.EntityTypeName.Item;
+            this.actionToolStripMenuItem1.ActionCommandType = pfw.UI.Win.Actions.ActionCommandTypes.Navigate;
+            this.actionToolStripMenuItem1.ActionEntityType = pfw.UI.Win.EntityServiceReference.EntityTypeName.Item;
             this.actionToolStripMenuItem1.ExecuteFunctionName = null;
             this.actionToolStripMenuItem1.ExecuteSP = null;
-            this.actionToolStripMenuItem1.FormType = pfw.UI.WinForms.FormTypes.NewMDIChild;
+            this.actionToolStripMenuItem1.FormType = pfw.UI.Win.WinForms.FormTypes.NewMDIChild;
             this.actionToolStripMenuItem1.Name = "actionToolStripMenuItem1";
             this.actionToolStripMenuItem1.Size = new System.Drawing.Size(43, 20);
             this.actionToolStripMenuItem1.Text = "&Item";
