@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using pfw.UI.Win.Handlers;
-using pfw.UI.Win.WinForms;
+using pfw.UI.Win.Managers;
 
 namespace pfw.UI.Win
 {
     static class Program
     {
+
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -18,48 +19,46 @@ namespace pfw.UI.Win
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            Load();
+            Run();
         }
-
-        private static IWin _DefaultMainWin;
-        public static MdiHandler MainHandler { get; private set; }
-
-        public static IWin MainWin
+        
+        private static void Run()
         {
-            get
+            try
             {
-                if (_DefaultMainWin == null)
-                    _DefaultMainWin = new MdiForm();
-                //
-                return _DefaultMainWin;
+                LoadApplication();
+                RunApplication();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private static IWin _entityView;
-        public static IWin EntityView
+        private static void LoadApplication()
         {
-            get
+            //
+            System.Threading.Thread.CurrentThread.Name = "MainAppThread";
+            Environment.Load();
+            //
+        }
+
+        private static void RunApplication()
+        {
+            //
+            try
             {
-                if (_entityView == null || (_entityView as WinForm).IsDisposed)
-                    _entityView = new WinForm();
-                return _entityView;
+                if (SessionManager.Load())
+                    SessionManager.Run();
             }
+            finally
+            {
+                SessionManager.CleanUp();
+            }
+            //
         }
+        
 
-        public static void Load()
-        {
-            MainHandler = new MdiHandler();
-            MainHandler.MainWinForm.Load += OnMainFormLoaded;
-            MainHandler.MainWinForm.FormClosed += OnMainFormClosed;
-            Application.Run(MainHandler.MainWinForm);
-        }
-
-        private static void OnMainFormLoaded(object sender, EventArgs e)
-        {
-        }
-
-        private static void OnMainFormClosed(object sender, EventArgs e)
-        {
-        }
+        
     }
 }

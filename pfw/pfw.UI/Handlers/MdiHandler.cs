@@ -47,7 +47,7 @@ namespace pfw.UI.Win.Handlers
 
         protected override IWin CreateWinForm()
         {
-            return Program.MainWin;
+            return Environment.MainWin;
         }
 
         public Managers.ActionMenuManager ActionMenuManager { get; set; }

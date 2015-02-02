@@ -43,7 +43,7 @@ namespace pfw.UI.Win.Handlers
             {
                 case FormTypes.NewMDIChild:
                     WinForm.ShowInTaskbar = false;
-                    WinForm.MdiParent = Program.MainHandler.MainWinForm;
+                    WinForm.MdiParent = Environment.MainHandler.MainWinForm;
                     WinForm.Show();
                     break;
             }

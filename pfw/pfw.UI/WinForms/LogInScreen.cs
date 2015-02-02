@@ -13,7 +13,7 @@ namespace pfw.UI.Win.WinForms
 
     public delegate void CancelLogInCallEventHandler();
 
-    public partial class LogInForm : Form
+    public partial class LogInScreen : Form
     {
         private DoLogInCallEventHandler _doLogInEventHandler;
         private CancelLogInCallEventHandler _cancelLogInEventHandler;
@@ -52,7 +52,7 @@ namespace pfw.UI.Win.WinForms
 
         #endregion
 
-        public LogInForm()
+        public LogInScreen()
         {
             InitializeComponent();
         }

@@ -28,10 +28,26 @@ namespace pfw.UI.Win.Managers
         public static bool Load()
         {
             InitiliazeVariables();
-            ShowLoginScreen();
             LogIn();
             WaitForLogIn();
             return IsLoggedOn;
+        }
+
+        public static bool Run()
+        {
+            MainHandler = new MdiHandler();
+            MainHandler.MainWinForm.Load += OnMainFormLoaded;
+            MainHandler.MainWinForm.FormClosed += OnMainFormClosed;
+            return MainHandler != null;
+        }
+
+        public static void CleanUp()
+        {
+            try
+            {
+                HideLoginScreen();
+            }
+            catch { }
         }
 
         private static void WaitForLogIn()
@@ -45,7 +61,9 @@ namespace pfw.UI.Win.Managers
             EntityManager = new EntityManager();
         }
 
-        private static void ShowLoginScreen()
+       
+
+        private static void HideLoginScreen()
         {
 
         }
@@ -53,6 +71,16 @@ namespace pfw.UI.Win.Managers
         private static void LogIn()
         {
             
+        }
+
+        private static void OnMainFormLoaded(object sender, EventArgs e)
+        {
+
+        }
+
+        private static void OnMainFormClosed(object sender, EventArgs e)
+        {
+
         }
     }
 }

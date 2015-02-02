@@ -34,9 +34,9 @@ namespace pfw.UI.Win.Handlers
             switch (InvokedAction.ActionEntityType)
             {
                 case EntityTypeName.Item:
-                    return Program.EntityView;
+                    return Environment.EntityView;
                 default:
-                    return Program.EntityView;
+                    return Environment.EntityView;
             }
         }
     }

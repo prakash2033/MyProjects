@@ -1,6 +1,6 @@
 ﻿namespace pfw.UI.Win.WinForms
 {
-    partial class LogInForm
+    partial class LogInScreen
     {
         /// <summary>
         /// Required designer variable.
