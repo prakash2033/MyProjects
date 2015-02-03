@@ -30,13 +30,18 @@ namespace pfw.UI.Win.WinForms
         {
             InitializeComponent();
             _ActionMenuManager = new ActionMenuManager();
+            UnBindEventHandlers();
             BindEventHandlers();
         }
 
-        private void BindEventHandlers()
+        public virtual void BindEventHandlers()
         {
             _ActionMenuManager.BindTo(this);
         }
 
+        public virtual void UnBindEventHandlers()
+        {
+            _ActionMenuManager.BindTo(this);
+        }
     }
 }

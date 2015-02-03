@@ -9,7 +9,7 @@ using pfw.Controller.Manager;
 namespace pfw.SDK.DataContracts
 {
     [DataContract]
-    public class EntityRequest
+    public class EntityRequest : Request
     {
         public EntityRequest()
         { }

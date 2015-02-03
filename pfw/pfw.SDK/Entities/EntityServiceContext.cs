@@ -24,6 +24,9 @@ namespace pfw.SDK.Entities
         public ActionRequest ActionRequest { get; set; }
         public ActionResponse ActionResponse { get; set; }
 
+        public Request Request { get; set; }
+        public Response Response { get; set; }
+
         public EntityBase EntityBase { get; set; }
 
         public EntityManager Manager
@@ -56,6 +59,11 @@ namespace pfw.SDK.Entities
         public EntityServiceContext(ActionRequest actionRequest)
         {
             ActionRequest = actionRequest;
+        }
+
+        public EntityServiceContext(Request request)
+        {
+            Request = request;
         }
 
         #endregion
@@ -98,6 +106,14 @@ namespace pfw.SDK.Entities
             }
 
             return ActionResponse;
+        }
+
+        public Response LogOff()
+        {
+            Response = new Response();
+            //
+            //
+            return Response;
         }
     }
 }

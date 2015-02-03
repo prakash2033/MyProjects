@@ -4,20 +4,73 @@
   <xs:import schemaLocation="http://localhost:57872/WCF/EntityService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/pfw.Controller.Base" />
   <xs:import schemaLocation="http://localhost:57872/WCF/EntityService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:complexType name="EntityRequest">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EntityId" type="xs:long" />
-      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/pfw.Controller.Manager" minOccurs="0" name="EntityManager" nillable="true" type="q1:EntityManager" />
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/pfw.Controller.Base" minOccurs="0" name="EntityTypeName" type="q2:EntityTypeName" />
-    </xs:sequence>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EntityId" type="xs:long" />
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/pfw.Controller.Manager" minOccurs="0" name="EntityManager" nillable="true" type="q1:EntityManager" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/pfw.Controller.Base" minOccurs="0" name="EntityTypeName" type="q2:EntityTypeName" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <xs:element name="EntityRequest" nillable="true" type="tns:EntityRequest" />
-  <xs:complexType name="EntityResponse">
+  <xs:complexType name="Request">
     <xs:sequence>
-      <xs:element minOccurs="0" name="EntityId" type="xs:long" />
-      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/pfw.Controller.Base" minOccurs="0" name="EntityTypeName" type="q3:EntityTypeName" />
-      <xs:element minOccurs="0" name="IsRequestSuccessful" type="xs:boolean" />
-      <xs:element minOccurs="0" name="ManagerGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="AuthenticationToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientType" type="xs:int" />
+      <xs:element minOccurs="0" name="ManagerKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserAgent" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:element name="Request" nillable="true" type="tns:Request" />
+  <xs:complexType name="EntityResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EntityId" type="xs:long" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/pfw.Controller.Base" minOccurs="0" name="EntityTypeName" type="q3:EntityTypeName" />
+          <xs:element minOccurs="0" name="ManagerGuid" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:element name="EntityResponse" nillable="true" type="tns:EntityResponse" />
+  <xs:complexType name="Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRequestSuccessful" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastErrorDetails" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastErrorTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessingServer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerProcessingTicks" type="xs:long" />
+      <xs:element minOccurs="0" name="TimeStamp" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response" nillable="true" type="tns:Response" />
+  <xs:complexType name="LogInRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ForceLogin" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MachineName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OSUserName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LogInRequest" nillable="true" type="tns:LogInRequest" />
+  <xs:complexType name="LogInResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Response">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LogInResponse" nillable="true" type="tns:LogInResponse" />
 </xs:schema>

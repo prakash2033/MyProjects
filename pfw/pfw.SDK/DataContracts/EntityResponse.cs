@@ -9,7 +9,7 @@ using pfw.Controller.Data;
 namespace pfw.SDK.DataContracts
 {
     [DataContract]
-    public class EntityResponse
+    public class EntityResponse : Response
     {
         public EntityResponse()
         {
@@ -26,8 +26,5 @@ namespace pfw.SDK.DataContracts
 
         [DataMember]
         public Guid ManagerGuid { get; set; }
-
-        [DataMember]
-        public bool IsRequestSuccessful { get; set; }
     }
 }

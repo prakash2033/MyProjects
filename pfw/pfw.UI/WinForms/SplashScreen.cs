@@ -15,11 +15,11 @@ namespace pfw.UI.Win.WinForms
         public SplashScreen()
         {
             InitializeComponent();
+            StartTimer();
         }
 
-        protected override void OnLoad(EventArgs e)
+        private void StartTimer()
         {
-            base.OnLoad(e);
             timer = new Timer();
             timer.Interval = 3000;
             timer.Start();

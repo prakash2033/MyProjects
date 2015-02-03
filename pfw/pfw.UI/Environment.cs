@@ -57,7 +57,7 @@ namespace pfw.UI.Win
             }
         }
 
-        
+
 
         public static LogInScreen LogInScreen
         {

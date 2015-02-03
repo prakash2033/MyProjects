@@ -9,32 +9,42 @@
       <xsd:import schemaLocation="http://localhost:57872/WCF/EntityService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/pfw.Controller.Base" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IEntityService_DoWork_InputMessage">
-    <wsdl:part name="parameters" element="tns:DoWork" />
-  </wsdl:message>
-  <wsdl:message name="IEntityService_DoWork_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
-  </wsdl:message>
   <wsdl:message name="IEntityService_Entity_InputMessage">
     <wsdl:part name="parameters" element="tns:Entity" />
   </wsdl:message>
   <wsdl:message name="IEntityService_Entity_OutputMessage">
     <wsdl:part name="parameters" element="tns:EntityResponse" />
   </wsdl:message>
+  <wsdl:message name="IEntityService_Layout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Layout" />
+  </wsdl:message>
+  <wsdl:message name="IEntityService_Layout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntityService_LogIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogIn" />
+  </wsdl:message>
+  <wsdl:message name="IEntityService_LogIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogInResponse" />
+  </wsdl:message>
   <wsdl:portType name="IEntityService">
-    <wsdl:operation name="DoWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/IEntityService/DoWork" message="tns:IEntityService_DoWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IEntityService/DoWorkResponse" message="tns:IEntityService_DoWork_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="Entity">
       <wsdl:input wsaw:Action="http://tempuri.org/IEntityService/Entity" message="tns:IEntityService_Entity_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEntityService/EntityResponse" message="tns:IEntityService_Entity_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="Layout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntityService/Layout" message="tns:IEntityService_Layout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntityService/LayoutResponse" message="tns:IEntityService_Layout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEntityService/LogIn" message="tns:IEntityService_LogIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEntityService/LogInResponse" message="tns:IEntityService_LogIn_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IEntityService" type="tns:IEntityService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="DoWork">
-      <soap:operation soapAction="http://tempuri.org/IEntityService/DoWork" style="document" />
+    <wsdl:operation name="Entity">
+      <soap:operation soapAction="http://tempuri.org/IEntityService/Entity" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -42,8 +52,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Entity">
-      <soap:operation soapAction="http://tempuri.org/IEntityService/Entity" style="document" />
+    <wsdl:operation name="Layout">
+      <soap:operation soapAction="http://tempuri.org/IEntityService/Layout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogIn">
+      <soap:operation soapAction="http://tempuri.org/IEntityService/LogIn" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

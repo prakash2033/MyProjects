@@ -53,6 +53,10 @@
     <Compile Include="DataContracts\ActionResponse.cs" />
     <Compile Include="DataContracts\EntityRequest.cs" />
     <Compile Include="DataContracts\EntityResponse.cs" />
+    <Compile Include="DataContracts\LogInRequest.cs" />
+    <Compile Include="DataContracts\LogInResponse.cs" />
+    <Compile Include="DataContracts\Request.cs" />
+    <Compile Include="DataContracts\Response.cs" />
     <Compile Include="Entities\EntityServiceContext.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

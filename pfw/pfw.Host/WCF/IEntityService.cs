@@ -17,5 +17,8 @@ namespace pfw.Host.WCF
 
         [OperationContract] 
         EntityResponse Layout(EntityRequest request);
+
+        [OperationContract]
+        LogInResponse LogIn(LogInRequest request);
     }
 }

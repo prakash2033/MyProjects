@@ -15,21 +15,29 @@ namespace pfw.UI.Win.EntityServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EntityRequest", Namespace="http://schemas.datacontract.org/2004/07/pfw.SDK.DataContracts")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Request", Namespace="http://schemas.datacontract.org/2004/07/pfw.SDK.DataContracts")]
     [System.SerializableAttribute()]
-    public partial class EntityRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(pfw.UI.Win.EntityServiceReference.LogInRequest))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(pfw.UI.Win.EntityServiceReference.EntityRequest))]
+    public partial class Request : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long EntityIdField;
+        private string AuthenticationTokenField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private pfw.UI.Win.EntityServiceReference.EntityManager EntityManagerField;
+        private int ClientTypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private pfw.UI.Win.EntityServiceReference.EntityTypeName EntityTypeNameField;
+        private string ManagerKeyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RequestKeyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserAgentField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -40,6 +48,183 @@ namespace pfw.UI.Win.EntityServiceReference {
                 this.extensionDataField = value;
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AuthenticationToken {
+            get {
+                return this.AuthenticationTokenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AuthenticationTokenField, value) != true)) {
+                    this.AuthenticationTokenField = value;
+                    this.RaisePropertyChanged("AuthenticationToken");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ClientType {
+            get {
+                return this.ClientTypeField;
+            }
+            set {
+                if ((this.ClientTypeField.Equals(value) != true)) {
+                    this.ClientTypeField = value;
+                    this.RaisePropertyChanged("ClientType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ManagerKey {
+            get {
+                return this.ManagerKeyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ManagerKeyField, value) != true)) {
+                    this.ManagerKeyField = value;
+                    this.RaisePropertyChanged("ManagerKey");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RequestKey {
+            get {
+                return this.RequestKeyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RequestKeyField, value) != true)) {
+                    this.RequestKeyField = value;
+                    this.RaisePropertyChanged("RequestKey");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserAgent {
+            get {
+                return this.UserAgentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserAgentField, value) != true)) {
+                    this.UserAgentField = value;
+                    this.RaisePropertyChanged("UserAgent");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LogInRequest", Namespace="http://schemas.datacontract.org/2004/07/pfw.SDK.DataContracts")]
+    [System.SerializableAttribute()]
+    public partial class LogInRequest : pfw.UI.Win.EntityServiceReference.Request {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ForceLoginField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MachineNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OSUserNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserNameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool ForceLogin {
+            get {
+                return this.ForceLoginField;
+            }
+            set {
+                if ((this.ForceLoginField.Equals(value) != true)) {
+                    this.ForceLoginField = value;
+                    this.RaisePropertyChanged("ForceLogin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MachineName {
+            get {
+                return this.MachineNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MachineNameField, value) != true)) {
+                    this.MachineNameField = value;
+                    this.RaisePropertyChanged("MachineName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string OSUserName {
+            get {
+                return this.OSUserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OSUserNameField, value) != true)) {
+                    this.OSUserNameField = value;
+                    this.RaisePropertyChanged("OSUserName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityRequest", Namespace="http://schemas.datacontract.org/2004/07/pfw.SDK.DataContracts")]
+    [System.SerializableAttribute()]
+    public partial class EntityRequest : pfw.UI.Win.EntityServiceReference.Request {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long EntityIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private pfw.UI.Win.EntityServiceReference.EntityManager EntityManagerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private pfw.UI.Win.EntityServiceReference.EntityTypeName EntityTypeNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public long EntityId {
@@ -77,15 +262,6 @@ namespace pfw.UI.Win.EntityServiceReference {
                     this.EntityTypeNameField = value;
                     this.RaisePropertyChanged("EntityTypeName");
                 }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -170,24 +346,41 @@ namespace pfw.UI.Win.EntityServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EntityResponse", Namespace="http://schemas.datacontract.org/2004/07/pfw.SDK.DataContracts")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Response", Namespace="http://schemas.datacontract.org/2004/07/pfw.SDK.DataContracts")]
     [System.SerializableAttribute()]
-    public partial class EntityResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(pfw.UI.Win.EntityServiceReference.LogInResponse))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(pfw.UI.Win.EntityServiceReference.EntityResponse))]
+    public partial class Response : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long EntityIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private pfw.UI.Win.EntityServiceReference.EntityTypeName EntityTypeNameField;
+        private string ErrorIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool IsRequestSuccessfulField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid ManagerGuidField;
+        private string LastErrorDetailsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastErrorMessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastErrorTitleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProcessingServerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RequestKeyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long ServerProcessingTicksField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] TimeStampField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -198,6 +391,155 @@ namespace pfw.UI.Win.EntityServiceReference {
                 this.extensionDataField = value;
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorID {
+            get {
+                return this.ErrorIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorIDField, value) != true)) {
+                    this.ErrorIDField = value;
+                    this.RaisePropertyChanged("ErrorID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsRequestSuccessful {
+            get {
+                return this.IsRequestSuccessfulField;
+            }
+            set {
+                if ((this.IsRequestSuccessfulField.Equals(value) != true)) {
+                    this.IsRequestSuccessfulField = value;
+                    this.RaisePropertyChanged("IsRequestSuccessful");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastErrorDetails {
+            get {
+                return this.LastErrorDetailsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastErrorDetailsField, value) != true)) {
+                    this.LastErrorDetailsField = value;
+                    this.RaisePropertyChanged("LastErrorDetails");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastErrorMessage {
+            get {
+                return this.LastErrorMessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastErrorMessageField, value) != true)) {
+                    this.LastErrorMessageField = value;
+                    this.RaisePropertyChanged("LastErrorMessage");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastErrorTitle {
+            get {
+                return this.LastErrorTitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastErrorTitleField, value) != true)) {
+                    this.LastErrorTitleField = value;
+                    this.RaisePropertyChanged("LastErrorTitle");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProcessingServer {
+            get {
+                return this.ProcessingServerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProcessingServerField, value) != true)) {
+                    this.ProcessingServerField = value;
+                    this.RaisePropertyChanged("ProcessingServer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RequestKey {
+            get {
+                return this.RequestKeyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RequestKeyField, value) != true)) {
+                    this.RequestKeyField = value;
+                    this.RaisePropertyChanged("RequestKey");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long ServerProcessingTicks {
+            get {
+                return this.ServerProcessingTicksField;
+            }
+            set {
+                if ((this.ServerProcessingTicksField.Equals(value) != true)) {
+                    this.ServerProcessingTicksField = value;
+                    this.RaisePropertyChanged("ServerProcessingTicks");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] TimeStamp {
+            get {
+                return this.TimeStampField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TimeStampField, value) != true)) {
+                    this.TimeStampField = value;
+                    this.RaisePropertyChanged("TimeStamp");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LogInResponse", Namespace="http://schemas.datacontract.org/2004/07/pfw.SDK.DataContracts")]
+    [System.SerializableAttribute()]
+    public partial class LogInResponse : pfw.UI.Win.EntityServiceReference.Response {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityResponse", Namespace="http://schemas.datacontract.org/2004/07/pfw.SDK.DataContracts")]
+    [System.SerializableAttribute()]
+    public partial class EntityResponse : pfw.UI.Win.EntityServiceReference.Response {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long EntityIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private pfw.UI.Win.EntityServiceReference.EntityTypeName EntityTypeNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid ManagerGuidField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public long EntityId {
@@ -226,19 +568,6 @@ namespace pfw.UI.Win.EntityServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsRequestSuccessful {
-            get {
-                return this.IsRequestSuccessfulField;
-            }
-            set {
-                if ((this.IsRequestSuccessfulField.Equals(value) != true)) {
-                    this.IsRequestSuccessfulField = value;
-                    this.RaisePropertyChanged("IsRequestSuccessful");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Guid ManagerGuid {
             get {
                 return this.ManagerGuidField;
@@ -250,26 +579,20 @@ namespace pfw.UI.Win.EntityServiceReference {
                 }
             }
         }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="EntityServiceReference.IEntityService")]
     public interface IEntityService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntityService/DoWork", ReplyAction="http://tempuri.org/IEntityService/DoWorkResponse")]
-        void DoWork();
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntityService/Entity", ReplyAction="http://tempuri.org/IEntityService/EntityResponse")]
         pfw.UI.Win.EntityServiceReference.EntityResponse Entity(pfw.UI.Win.EntityServiceReference.EntityRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntityService/Layout", ReplyAction="http://tempuri.org/IEntityService/LayoutResponse")]
+        pfw.UI.Win.EntityServiceReference.EntityResponse Layout(pfw.UI.Win.EntityServiceReference.EntityRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEntityService/LogIn", ReplyAction="http://tempuri.org/IEntityService/LogInResponse")]
+        pfw.UI.Win.EntityServiceReference.LogInResponse LogIn(pfw.UI.Win.EntityServiceReference.LogInRequest request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -299,12 +622,16 @@ namespace pfw.UI.Win.EntityServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public void DoWork() {
-            base.Channel.DoWork();
-        }
-        
         public pfw.UI.Win.EntityServiceReference.EntityResponse Entity(pfw.UI.Win.EntityServiceReference.EntityRequest request) {
             return base.Channel.Entity(request);
+        }
+        
+        public pfw.UI.Win.EntityServiceReference.EntityResponse Layout(pfw.UI.Win.EntityServiceReference.EntityRequest request) {
+            return base.Channel.Layout(request);
+        }
+        
+        public pfw.UI.Win.EntityServiceReference.LogInResponse LogIn(pfw.UI.Win.EntityServiceReference.LogInRequest request) {
+            return base.Channel.LogIn(request);
         }
     }
 }

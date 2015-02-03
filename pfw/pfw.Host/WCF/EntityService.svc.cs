@@ -31,5 +31,16 @@ namespace pfw.Host.WCF
 
             return new EntityServiceContext(request).Entity();
         }
+
+        public Response LogOff(Request request)
+        {
+            return new EntityServiceContext(request).LogOff();
+        }
+
+
+        public LogInResponse LogIn(LogInRequest request)
+        {
+            return null;
+        }
     }
 }

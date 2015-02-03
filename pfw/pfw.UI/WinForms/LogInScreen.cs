@@ -13,7 +13,7 @@ namespace pfw.UI.Win.WinForms
 
     public delegate void CancelLogInCallEventHandler();
 
-    public partial class LogInScreen : Form
+    public partial class LogInScreen : WinForm
     {
         private DoLogInCallEventHandler _doLogInEventHandler;
         private CancelLogInCallEventHandler _cancelLogInEventHandler;
@@ -53,8 +53,40 @@ namespace pfw.UI.Win.WinForms
         #endregion
 
         public LogInScreen()
+            : base()
         {
             InitializeComponent();
+        }
+
+        public override void UnBindEventHandlers()
+        {
+            base.UnBindEventHandlers();
+            btnConnect.Click -= new EventHandler(btnConnect_Click);
+            btnCancel.Click -= new EventHandler(btnCancel_Click);
+        }
+
+        public override void BindEventHandlers()
+        {
+            base.BindEventHandlers();
+            btnConnect.Click += new EventHandler(btnConnect_Click);
+            btnCancel.Click += new EventHandler(btnCancel_Click);
+        }
+
+        void btnConnect_Click(object sender, EventArgs e)
+        {
+            //
+            Application.DoEvents();
+            //
+            if (!string.IsNullOrEmpty(txtUsername.Text))
+                txtPassword.Select();
+            //
+            _doLogInEventHandler(txtUsername.Text, txtPassword.Text, cmbServerAddress.Text);
+            //
+        }
+
+        void btnCancel_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
