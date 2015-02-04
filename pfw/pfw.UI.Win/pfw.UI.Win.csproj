@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{96A900F8-23F9-4AA3-B064-02BB0617E59E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pfw.UI.Win</RootNamespace>
+    <AssemblyName>pfw.UI.Win</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\ActionCommandTypes.cs" />
+    <Compile Include="Actions\ActionComponent.cs" />
+    <Compile Include="Actions\ActionToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Actions\ActionToolStripMenuItem.Designer.cs">
+      <DependentUpon>ActionToolStripMenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\IActionComponent.cs" />
+    <Compile Include="Controls\pButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\pButton.Designer.cs">
+      <DependentUpon>pButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environment.cs" />
+    <Compile Include="Managers\ActionMenuManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinForms\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\CatalogWinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\CatalogWinForm.Designer.cs">
+      <DependentUpon>CatalogWinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\ErrorScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\ErrorScreen.Designer.cs">
+      <DependentUpon>ErrorScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\Form1.Designer.cs">
+      <DependentUpon>MdiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\FormTypes.cs" />
+    <Compile Include="WinForms\IWin.cs" />
+    <Compile Include="WinForms\LogInScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\LogInScreen.Designer.cs">
+      <DependentUpon>LogInScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\MdiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\WinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\WinForm.Designer.cs">
+      <DependentUpon>WinForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\pButton.resx">
+      <DependentUpon>pButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\CatalogWinForm.resx">
+      <DependentUpon>CatalogWinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\ErrorScreen.resx">
+      <DependentUpon>ErrorScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\LogInScreen.resx">
+      <DependentUpon>LogInScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\MdiForm.resx">
+      <DependentUpon>MdiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pfw.ServiceAgent\pfw.ServiceAgent.csproj">
+      <Project>{20E57CB5-33B5-48D8-9F7F-98525FF40B65}</Project>
+      <Name>pfw.ServiceAgent</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -21,10 +21,10 @@ namespace pfw.SDK.DataContracts
         [DataMember]
         public EntityTypeName EntityTypeName { get; set; }
 
-        //[DataMember]
-        //public EntityViewName EntityTypeName { get; set; }
-
         [DataMember]
         public Guid ManagerGuid { get; set; }
+
+        [DataMember]
+        public System.Windows.Forms.Form FormLayout { get; set; }
     }
 }

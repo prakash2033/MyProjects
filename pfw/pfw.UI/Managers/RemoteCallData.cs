@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using pfw.UI.Win.EntityServiceReference;
+using pfw.ServiceAgent.EntityServiceReference;
 
-namespace pfw.UI.Win.Managers
+namespace pfw.UI.Managers
 {
     public class RemoteCallData
     {

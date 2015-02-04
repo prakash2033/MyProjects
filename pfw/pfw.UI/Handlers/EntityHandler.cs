@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using pfw.ServiceAgent.EntityServiceReference;
 using pfw.UI.Win.Actions;
 using pfw.UI.Win.WinForms;
-using pfw.UI.Win.EntityServiceReference;
 
-namespace pfw.UI.Win.Handlers
+namespace pfw.UI.Handlers
 {
     public class EntityHandler : Handler
     {
@@ -34,9 +34,9 @@ namespace pfw.UI.Win.Handlers
             switch (InvokedAction.ActionEntityType)
             {
                 case EntityTypeName.Item:
-                    return Environment.EntityView;
+                    return pfw.UI.Win.Environment.EntityView;
                 default:
-                    return Environment.EntityView;
+                    return pfw.UI.Win.Environment.EntityView;
             }
         }
     }

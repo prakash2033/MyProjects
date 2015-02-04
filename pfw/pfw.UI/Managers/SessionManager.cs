@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using pfw.UI.Win.Handlers;
-using pfw.UI.Win.EntityServiceReference;
+using pfw.UI.Handlers;
+using pfw.ServiceAgent.EntityServiceReference;
+using pfw.UI.Win.WinForms;
+using System.Windows.Forms;
 
-namespace pfw.UI.Win.Managers
+namespace pfw.UI.Managers
 {
     public static class SessionManager
     {
@@ -35,12 +37,53 @@ namespace pfw.UI.Win.Managers
             return IsLoggedOn;
         }
 
-        public static bool Run()
+        public static void Run()
+        {
+            if (LoadEnvironment())
+                ShowEnvironment();
+            //else
+            //    Forms.Environment.SendCommandToSplashScreen(LoginScreenCommands.DisableAutoLogIn, null);
+        }
+
+        private static void ShowEnvironment()
+        {
+            ShowMainForm();
+        }
+
+        private static void ShowMainForm()
+        {
+            if (MainHandler != null)
+                Application.Run(MainHandler.MainWinForm);
+        }
+
+        private static bool LoadEnvironment()
+        {
+            bool isEnvironmentLoaded = false;
+            try
+            {
+                isEnvironmentLoaded =
+                    LoadUserEnvironment()
+                    && LoadMainWinHandler();
+            }
+            catch (Exception ex)
+            {
+                //PromptHelper.PromptErrorCode(ex, null, string.Empty);
+            }
+            //
+            return isEnvironmentLoaded;
+        }
+
+        private static bool LoadMainWinHandler()
         {
             MainHandler = new MdiHandler();
             MainHandler.MainWinForm.Load += OnMainFormLoaded;
             MainHandler.MainWinForm.FormClosed += OnMainFormClosed;
             return MainHandler != null;
+        }
+
+        private static bool LoadUserEnvironment()
+        {
+            return true;
         }
 
         public static void CleanUp()
@@ -63,8 +106,6 @@ namespace pfw.UI.Win.Managers
             EntityManager = new EntityManager();
         }
 
-       
-
         private static void HideLoginScreen()
         {
 
@@ -72,7 +113,12 @@ namespace pfw.UI.Win.Managers
 
         private static void LogIn()
         {
-            
+            StartLogInProcess((DoLogInCallEventHandler)DoLogIn);
+        }
+
+        private static void StartLogInProcess(DoLogInCallEventHandler doLogInCallEventHandler)
+        {
+            pfw.UI.Win.Environment.LogInScreen.Hide();
         }
 
         private static void DoLogIn(string userName, string password, string serverAddress)

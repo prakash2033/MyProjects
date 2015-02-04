@@ -14,3 +14,11 @@ C:\Users\PRAKASH VISHWAKARMA\Documents\Visual Studio 2010\Projects\pfw\pfw.SDK\b
 C:\Users\PRAKASH VISHWAKARMA\Documents\Visual Studio 2010\Projects\pfw\pfw.SDK\obj\x86\Debug\pfw.SDK.csprojResolveAssemblyReference.cache
 C:\Users\PRAKASH VISHWAKARMA\Documents\Visual Studio 2010\Projects\pfw\pfw.SDK\obj\x86\Debug\pfw.SDK.dll
 C:\Users\PRAKASH VISHWAKARMA\Documents\Visual Studio 2010\Projects\pfw\pfw.SDK\obj\x86\Debug\pfw.SDK.pdb
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.SDK\bin\Debug\pfw.SDK.dll
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.SDK\bin\Debug\pfw.SDK.pdb
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.SDK\bin\Debug\pfw.Controller.dll
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.SDK\bin\Debug\EntityFramework.dll
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.SDK\bin\Debug\pfw.Controller.pdb
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.SDK\obj\x86\Debug\pfw.SDK.csprojResolveAssemblyReference.cache
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.SDK\obj\x86\Debug\pfw.SDK.dll
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.SDK\obj\x86\Debug\pfw.SDK.pdb

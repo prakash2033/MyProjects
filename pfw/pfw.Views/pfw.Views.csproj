@@ -15,7 +15,7 @@
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -89,8 +89,8 @@
     <Folder Include="EntityViews\Transactions\Entity\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\pfw.UI\pfw.UI.Win.csproj">
-      <Project>{CEA1BEF4-3006-4475-9F08-3A8D420302FC}</Project>
+    <ProjectReference Include="..\pfw.UI.Win\pfw.UI.Win.csproj">
+      <Project>{96A900F8-23F9-4AA3-B064-02BB0617E59E}</Project>
       <Name>pfw.UI.Win</Name>
     </ProjectReference>
   </ItemGroup>

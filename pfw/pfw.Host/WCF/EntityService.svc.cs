@@ -22,6 +22,7 @@ namespace pfw.Host.WCF
         public EntityResponse Layout(EntityRequest request)
         {
             return null;
+            //return new EntityServiceContext(request).EntityView();
         }
 
         public EntityResponse Entity(EntityRequest request)

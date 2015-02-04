@@ -1,9 +1,11 @@
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\bin\Debug\pfw.UI.Win.pdb
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\bin\Debug\pfw.ServiceAgent.dll
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\bin\Debug\pfw.UI.Win.dll
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\bin\Debug\pfw.ServiceAgent.pdb
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.csprojResolveAssemblyReference.cache
+C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.csproj.GenerateResource.Cache
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\bin\Debug\pfw.UI.exe
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\bin\Debug\pfw.UI.pdb
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.Properties.Resources.resources
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.csproj.GenerateResource.Cache
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.exe
 C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.pdb
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.WinForms.MdiForm.resources
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\bin\Debug\pfw.UI.exe.config
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.UI\obj\x86\Debug\pfw.UI.WinForms.CatalogWinForm.resources

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using pfw.ServiceAgent.EntityServiceReference;
 using pfw.UI.Win.WinForms;
 using pfw.UI.Win.Actions;
+using pfw.UI.Win.Managers;
 
-namespace pfw.UI.Win.Handlers
+namespace pfw.UI.Handlers
 {
     public class MdiHandler : EntityHandler, IWin
     {
@@ -47,12 +49,12 @@ namespace pfw.UI.Win.Handlers
 
         protected override IWin CreateWinForm()
         {
-            return Environment.MainWin;
+            return pfw.UI.Win.Environment.MainWin;
         }
 
-        public Managers.ActionMenuManager ActionMenuManager { get; set; }
+        public ActionMenuManager ActionMenuManager { get; set; }
 
-        public EntityServiceReference.EntityTypeName DefaultEntityType { get; set; }
+        public EntityTypeName DefaultEntityType { get; set; }
 
         public void Close()
         {

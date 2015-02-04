@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using pfw.UI.Win.WinForms;
-using pfw.UI.Win.Actions;
 using System.Windows.Forms;
+using pfw.UI.Managers;
+using pfw.UI.Win.Actions;
+using pfw.UI.Win.WinForms;
 using pfw.UI.Win.Managers;
 
-namespace pfw.UI.Win.Handlers
+namespace pfw.UI.Handlers
 {
     public abstract class Handler
     {
@@ -43,7 +44,7 @@ namespace pfw.UI.Win.Handlers
             {
                 case FormTypes.NewMDIChild:
                     WinForm.ShowInTaskbar = false;
-                    WinForm.MdiParent = Environment.MainHandler.MainWinForm;
+                    WinForm.MdiParent = SessionManager.MainHandler.MainWinForm;
                     WinForm.Show();
                     break;
             }

@@ -76,13 +76,12 @@ namespace pfw.SDK.Entities
             {
                 if (EntityRequest != null && Manager != null)
                 {
-
+                    
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                throw ex;
             }
 
             return EntityResponse;
@@ -114,6 +113,14 @@ namespace pfw.SDK.Entities
             //
             //
             return Response;
+        }
+
+        public EntityResponse EntityView()
+        {
+            EntityResponse = new EntityResponse();
+            //
+            //
+            return EntityResponse;
         }
     }
 }

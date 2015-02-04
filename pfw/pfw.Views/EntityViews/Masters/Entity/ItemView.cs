@@ -10,6 +10,7 @@ using pfw.UI.Win.WinForms;
 
 namespace pfw.Views.EntityViews.Masters.Entity
 {
+    [Serializable]
     public partial class ItemView : WinForm
     {
         public ItemView()

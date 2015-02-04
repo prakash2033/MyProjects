@@ -10,6 +10,7 @@ using pfw.UI.Win.WinForms;
 
 namespace pfw.Views.EntityViews.Masters.Catalog
 {
+    [Serializable]
     public partial class AllItemView : CatalogWinForm
     {
         public AllItemView()

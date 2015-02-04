@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using pfw.UI.Managers;
 using System.Windows.Forms;
-using pfw.UI.Win.Managers;
 
-namespace pfw.UI.Win
+namespace pfw.UI
 {
     static class Program
     {
@@ -18,8 +18,7 @@ namespace pfw.UI.Win
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            Run();
+            Program.Run();
         }
         
         private static void Run()
@@ -39,7 +38,7 @@ namespace pfw.UI.Win
         {
             //
             System.Threading.Thread.CurrentThread.Name = "MainAppThread";
-            Environment.Load();
+            pfw.UI.Win.Environment.Load();
             //
         }
 
@@ -48,7 +47,7 @@ namespace pfw.UI.Win
             //
             try
             {
-                if (SessionManager.Load())
+                if (!pfw.UI.Win.Environment.LogInScreen.IsDisposed && SessionManager.Load())
                     SessionManager.Run();
             }
             finally
