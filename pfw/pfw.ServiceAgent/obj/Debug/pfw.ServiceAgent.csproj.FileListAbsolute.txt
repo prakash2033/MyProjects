@@ -1,5 +1,0 @@
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.ServiceAgent\bin\Debug\pfw.ServiceAgent.dll.config
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.ServiceAgent\bin\Debug\pfw.ServiceAgent.dll
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.ServiceAgent\bin\Debug\pfw.ServiceAgent.pdb
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.ServiceAgent\obj\Debug\pfw.ServiceAgent.dll
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.ServiceAgent\obj\Debug\pfw.ServiceAgent.pdb

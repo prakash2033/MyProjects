@@ -12,10 +12,3 @@ C:\Users\PRAKASH VISHWAKARMA\Documents\Visual Studio 2010\Projects\pfw\pfw.Model
 C:\Users\PRAKASH VISHWAKARMA\Documents\Visual Studio 2010\Projects\pfw\pfw.Model\obj\Debug\pfw.Model.csprojResolveAssemblyReference.cache
 C:\Users\PRAKASH VISHWAKARMA\Documents\Visual Studio 2010\Projects\pfw\pfw.Model\obj\Debug\pfw.Model.dll
 C:\Users\PRAKASH VISHWAKARMA\Documents\Visual Studio 2010\Projects\pfw\pfw.Model\obj\Debug\pfw.Model.pdb
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Model\bin\Debug\pfw.Model.dll
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Model\bin\Debug\pfw.Model.pdb
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Model\bin\Debug\pfw.Controller.dll
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Model\bin\Debug\pfw.Controller.pdb
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Model\obj\Debug\pfw.Model.csprojResolveAssemblyReference.cache
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Model\obj\Debug\pfw.Model.dll
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Model\obj\Debug\pfw.Model.pdb

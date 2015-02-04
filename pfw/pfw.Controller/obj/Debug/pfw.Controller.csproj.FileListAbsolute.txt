@@ -8,7 +8,3 @@ C:\Users\PRAKASH VISHWAKARMA\Documents\Visual Studio 2010\Projects\pfw\pfw.Contr
 C:\Users\PRAKASH VISHWAKARMA\Documents\Visual Studio 2010\Projects\pfw\pfw.Controller\obj\Debug\pfw.Controller.csprojResolveAssemblyReference.cache
 C:\Users\PRAKASH VISHWAKARMA\Documents\Visual Studio 2010\Projects\pfw\pfw.Controller\obj\Debug\pfw.Controller.dll
 C:\Users\PRAKASH VISHWAKARMA\Documents\Visual Studio 2010\Projects\pfw\pfw.Controller\obj\Debug\pfw.Controller.pdb
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Controller\bin\Debug\pfw.Controller.dll
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Controller\bin\Debug\pfw.Controller.pdb
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Controller\obj\Debug\pfw.Controller.dll
-C:\Users\prakashv\Documents\GitHub\MyProjects\pfw\pfw.Controller\obj\Debug\pfw.Controller.pdb
