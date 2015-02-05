@@ -6,6 +6,7 @@ using pfw.UI.Handlers;
 using pfw.ServiceAgent.EntityServiceReference;
 using pfw.UI.Win.WinForms;
 using System.Windows.Forms;
+using pfw.UI.Resources;
 
 namespace pfw.UI.Managers
 {
@@ -32,6 +33,7 @@ namespace pfw.UI.Managers
         public static bool Load()
         {
             InitiliazeVariables();
+            BindCallBacks();
             LogIn();
             WaitForLogIn();
             return IsLoggedOn;
@@ -106,6 +108,25 @@ namespace pfw.UI.Managers
             EntityManager = new EntityManager();
         }
 
+        private static void BindCallBacks()
+        {
+            SetStatus(StringResource.LOGINFORM_LOADING);
+            pfw.UI.Win.Environment.SendCommandToSplashScreen(LoginScreenCommands.SetCancelCallback, (CancelLogInCallEventHandler)CancelLogInConvey);
+        }
+
+        private static void CancelLogInConvey()
+        {
+            if (IsLoggedOn)
+                return;
+            SetStatus(StringResource.None);
+            WaitForLoginAction.Set();
+        }
+
+        private static void SetStatus(string statusText)
+        {
+            pfw.UI.Win.Environment.SendCommandToSplashScreen(LoginScreenCommands.SetStatus, statusText);
+        }
+
         private static void HideLoginScreen()
         {
 
@@ -118,7 +139,7 @@ namespace pfw.UI.Managers
 
         private static void StartLogInProcess(DoLogInCallEventHandler doLogInCallEventHandler)
         {
-            pfw.UI.Win.Environment.LogInScreen.Hide();
+            //pfw.UI.Win.Environment.LogInScreen.Hide();
         }
 
         private static void DoLogIn(string userName, string password, string serverAddress)

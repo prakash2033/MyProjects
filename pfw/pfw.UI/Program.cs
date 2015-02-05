@@ -47,7 +47,7 @@ namespace pfw.UI
             //
             try
             {
-                if (!pfw.UI.Win.Environment.LogInScreen.IsDisposed && SessionManager.Load())
+                if (SessionManager.Load())
                     SessionManager.Run();
             }
             finally

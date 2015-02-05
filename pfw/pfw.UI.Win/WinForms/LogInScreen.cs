@@ -9,11 +9,26 @@ using System.Windows.Forms;
 
 namespace pfw.UI.Win.WinForms
 {
+    #region Enum
+
+    public enum LoginScreenCommands
+    {
+        SetStatus = 1,
+        SetCancelCallback = 2,
+        ShowLogComponents = 4,
+        SetLogInSuccessful = 5,
+        SetLogInUnSuccessful = 6,
+        Hide = 7,
+        DisableAutoLogIn = 8
+    }
+
+    #endregion
+
     public delegate void DoLogInCallEventHandler(string userName, string password, string serverAddress);
 
     public delegate void CancelLogInCallEventHandler();
 
-    public partial class LogInScreen : WinForm
+    public partial class LogInScreen : WinForm, ISplashScreen
     {
         private DoLogInCallEventHandler _doLogInEventHandler;
         private CancelLogInCallEventHandler _cancelLogInEventHandler;
@@ -66,7 +81,35 @@ namespace pfw.UI.Win.WinForms
             btnCancel.Click -= new EventHandler(btnCancel_Click);
         }
 
-        
+        #region ISplashScreen Memmers
+
+        void ISplashScreen.SetStatusInfo(string NewStatusInfo)
+        {
+            lblStatus.Text = NewStatusInfo;
+        }
+
+        void ISplashScreen.ProcessCommand(Enum cmd, object arg)
+        {
+            var action = (LoginScreenCommands)cmd;
+            if (action == LoginScreenCommands.SetStatus)
+            {
+                if (this is ISplashScreen)
+                    (this as ISplashScreen).SetStatusInfo((string)arg);
+                //SetStatus((string)arg);
+            }
+            else if (action == LoginScreenCommands.SetCancelCallback)
+                SetCancelCallback((CancelLogInCallEventHandler)arg);
+            else if (action == LoginScreenCommands.ShowLogComponents)
+                ShowLogIn(arg as DoLogInCallEventHandler);
+            else if (action == LoginScreenCommands.SetLogInSuccessful)
+                SetLogInSuccessful();
+            else if (action == LoginScreenCommands.SetLogInUnSuccessful)
+                SetLogInUnSuccessful();
+            else if (action == LoginScreenCommands.DisableAutoLogIn)
+                DisableAutoLogin();
+        }
+
+        #endregion
 
         public override void BindEventHandlers()
         {
@@ -84,7 +127,7 @@ namespace pfw.UI.Win.WinForms
         void btnConnect_Click(object sender, EventArgs e)
         {
             //
-            Application.DoEvents();
+            DoLogIn();
             //
             if (!string.IsNullOrEmpty(txtUsername.Text))
                 txtPassword.Select();
@@ -95,7 +138,79 @@ namespace pfw.UI.Win.WinForms
 
         void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();   
+            CancelLogIn();
+        }
+
+        private void CancelLogIn()
+        {
+            if (_cancelLogInEventHandler != null)
+                _cancelLogInEventHandler.Invoke();
+        }
+
+        private void DoLogIn()
+        {
+            //EODLogInComponents(false);
+            HideLogInComponents();
+            //
+            string password = txtPassword.Text;
+            //if (pfw.UI.Win.Properties.Settings.Default.RememberPassword && password == DISPLAY_PASSWORD)
+            //    password = CrypTo.DecryptString(Excellon.FW5.UI.Win.Forms.Properties.Settings.Default.SavedPassword);
+            //
+            _doLogInEventHandler(txtUsername.Text, password, cmbServerAddress.Text);
+        }
+
+        public void SetStatus(string text)
+        {
+            lblStatus.Text = text;
+        }
+
+        public void SetCancelCallback(CancelLogInCallEventHandler cancelCallback)
+        {
+            _cancelLogInEventHandler = cancelCallback;
+        }
+
+        public void ShowLogIn(DoLogInCallEventHandler doLogInCallBack)
+        {
+            _doLogInEventHandler = doLogInCallBack;
+            ////
+            //LoadDefaults();
+            //ValidateData();
+            //if (CanDoAutoLogin())
+            //    DoLogIn();
+            //else
+            //{
+            //    ShowLogInComponents();
+            //    EODLogInComponents(true);
+            //    BringToFocus();
+            //}
+        }
+
+        public void SetLogInSuccessful()
+        {
+            //SaveDefaults();
+            HideLogInComponents();
+            //EnableAutoLogin();
+        }
+
+        public void SetLogInUnSuccessful()
+        {
+            //EODLogInComponents(true);
+            //DisableAutoLogin();
+        }
+
+        private void HideLogInComponents()
+        {
+            Application.DoEvents();
+        }
+
+        private void DisableAutoLogin()
+        {
+            try
+            {
+                //Properties.Settings.Default.DisableAutoLogIn = true;
+                //Properties.Settings.Default.Save();
+            }
+            catch { }
         }
     }
 }

@@ -63,6 +63,7 @@
     </Compile>
     <Compile Include="Environment.cs" />
     <Compile Include="Managers\ActionMenuManager.cs" />
+    <Compile Include="Managers\SplashScreenManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WinForms\AboutBox.cs">
       <SubType>Form</SubType>
@@ -86,6 +87,7 @@
       <DependentUpon>MdiForm.cs</DependentUpon>
     </Compile>
     <Compile Include="WinForms\FormTypes.cs" />
+    <Compile Include="WinForms\ISplashScreen.cs" />
     <Compile Include="WinForms\IWin.cs" />
     <Compile Include="WinForms\LogInScreen.cs">
       <SubType>Form</SubType>

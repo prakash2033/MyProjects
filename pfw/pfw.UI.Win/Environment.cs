@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using pfw.UI.Win.WinForms;
+using pfw.UI.Win.Managers;
 
 namespace pfw.UI.Win
 {
@@ -70,9 +71,7 @@ namespace pfw.UI.Win
 
         public static void Load()
         {
-            LogInScreen.Show();
-            //SplashScreen.ShowDialog();
-            //System.Windows.Forms.Application.Run(SplashScreen);
+            SplashScreenManager.ShowForm(typeof(LogInScreen));
         }
 
         static void SplashScreen_Timer_Tick(object sender, EventArgs e)
@@ -84,6 +83,18 @@ namespace pfw.UI.Win
             //
             LogInScreen.ShowDialog();
             //
+        }
+
+        public static void SendCommandToSplashScreen(LoginScreenCommands command, object arg)
+        {
+            try
+            {
+                if (command == LoginScreenCommands.Hide)
+                    SplashScreenManager.Close();
+                else
+                    SplashScreenManager.Default.ProcessCommand(command, arg);
+            }
+            catch { }
         }
     }
 }
